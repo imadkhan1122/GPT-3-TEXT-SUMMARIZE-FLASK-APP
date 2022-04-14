@@ -1,0 +1,45 @@
+<!doctype html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	  <title>TEXT SUMMARIZATION</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous">
+	  <link rel="stylesheet" type="text/css" href="/content/drive/MyDrive/POSE-ESTIMATION/static/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body class="container">
+  <h1 style="text-align:center;color:blue;">Text Summarization</h1>
+  <hr>
+  <br><br>
+
+  <div class="main">
+    <form class="form-group" method="POST" action="/">
+    <h4 style="color:skyblue;">Text For Summarization:</h4><br>
+    <textarea name="Text" class="form-control rounded-0" rows="10"></textarea>
+    <br><br>
+    <h4 style="color:skyblue;">Maximun Lenght of Summary:<h4><br>
+    <input type="number" class="form-control"  name="number"><br>
+    <button type="submit" class="pure-button btn btn-primary" value="Submit">Submit</button>
+    </form>
+  </div>
+
+<br>
+
+<div class="main">
+	{% if text %}
+	    <div class="form-control">
+        <h4 style="color:skyblue;">Summary</h4>
+        {% print(text) %}
+      </div>
+	{% endif %}
+  <br><br><br>
+</div>
+
+</body>
